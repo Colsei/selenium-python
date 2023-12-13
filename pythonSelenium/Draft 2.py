@@ -24,7 +24,7 @@ all_data = {'Tiêu đề': [], 'Nội dung': []}
 for url in urls:
     driver.get(url)
 
-    try: #cho mấy bài dạng article
+    try:
         # Lấy tiêu đề bài báo
         title_element = driver.find_element(By.CSS_SELECTOR,"h1.jsx-89440")
         # driver.find_element(By.XPATH,"//input[@type='submit']").click()
@@ -33,7 +33,7 @@ for url in urls:
         # Lấy nội dung bài báo
         content_element = driver.find_element(By.CSS_SELECTOR,"article.jsx-89440 div.jsx-89440")
         content = content_element.text.strip()
-    except: #cho mấy bài dạng fb post
+    except:
         # Lấy tiêu đề bài báo
         title = driver.title
 
