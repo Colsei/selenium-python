@@ -1,3 +1,5 @@
+#Làm kiểu lấy link r lưu lại r lôi ra vào từng linh thay vì liệt kê như này
+
 from selenium import webdriver
 from selenium.webdriver.common.by import By
 import pandas as pd
