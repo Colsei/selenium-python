@@ -4,6 +4,8 @@ from selenium.webdriver.support.ui import WebDriverWait
 from selenium.webdriver.support import expected_conditions as EC
 import time
 
+#hãy gộp thành hàm chung cho các bước giống nhau
+
 driver = webdriver.Chrome()
 
 #Case 1: Registration-Sign-in
@@ -29,6 +31,8 @@ register_button.click()
 driver.find_element(By.CSS_SELECTOR, "img[src='https://practice.automationtesting.in/wp-content/uploads/2017/01/color-logo-original.png']").click()
 time.sleep(3)
 
+#lưu lại tk tạo được vào file nào đó (notepad)
+
 driver.quit()
 print("Case 1 passed.")
 print(" ")
@@ -44,6 +48,7 @@ my_account = WebDriverWait(driver, 10).until(
     EC.presence_of_element_located((By.CSS_SELECTOR, "a[href='https://practice.automationtesting.in/my-account/']"))
 )
 my_account.click()
+#để thêm hàm điều kiện để locate được element
 driver.find_element(By.CSS_SELECTOR, "input[id='reg_email']").send_keys('vuhuyhuuyopmailcom')
 time.sleep(3)
 driver.find_element(By.CSS_SELECTOR, "input[id='reg_password']").send_keys('@!Adssdf32a123456')

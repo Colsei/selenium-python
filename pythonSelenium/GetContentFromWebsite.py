@@ -58,4 +58,4 @@ driver.quit()
 dataframe = pd.DataFrame(all_data)
 
 # Xuất DataFrame ra file Excel
-dataframe.to_excel('C:/The REST/Career/Automation Test/PyCharm_Python/Bài tập/Get data from article/tinhte_articles.xlsx', index=False)
+dataframe.to_excel('D:/Huu\'s/The rest/The Future/Automation Test_Python_PyCharm/tinhte_articles.xlsx', index=False)
