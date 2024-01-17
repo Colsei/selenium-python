@@ -1,10 +1,15 @@
-import random
-import string
+from selenium import webdriver
+from selenium.webdriver.common.by import By
 
-def generate_random_password():
-    # Add special characters to the existing letters and digits
-    characters = string.ascii_letters + string.digits + "!@#$%^&*()-_=+"
-    return ''.join(random.choice(characters) for i in range(10))
+driver = webdriver.Chrome()
 
-# Example usage:
-print(generate_random_password())
+url = "https://tinhte.vn/forums/xe-hoi.545/"
+driver.get(url)
+
+elements = driver.find_elements(By.CSS_SELECTOR,"a.PreviewTooltip")
+
+for i in range(min(10, len(elements))):
+    title = elements[i].text.strip()
+    print("Title {}: {}".format(i + 1, title))
+
+driver.quit()
