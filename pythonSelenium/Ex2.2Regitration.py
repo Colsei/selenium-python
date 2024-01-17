@@ -29,6 +29,7 @@ for row in ws.iter_rows(min_row=2, max_col=3, values_only=True):
     try:
         if step == 1:
             driver.get('https://practice.automationtesting.in/')
+            driver.maximize_window()
             test_result = 'Passed'
         elif step == 2:
             test_result = 'Passed'
